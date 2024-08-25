@@ -1,3 +1,4 @@
+
 /* Estilos básicos */
 body, html {
     margin: 0;
@@ -11,6 +12,76 @@ body, html {
 .container {
     padding-bottom: 80px; /* Espacio adicional para la barra de navegación */
 }
+
+
+/* Contenedor para el encabezado superior */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Altura similar a la barra de navegación inferior */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6); /* Fondo blanco con transparencia */
+    backdrop-filter: blur(10px); /* Efecto borroso */
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra similar a la barra de navegación inferior */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+    
+}
+
+
+
+.top-nav img.logo {
+    width: 40px; /* Tamaño del logo */
+    height: auto;
+}
+
+.top-nav img.profile-pic {
+    width: 40px; /* Tamaño similar a la foto de perfil de las publicaciones */
+    height: 40px;
+    border-radius: 50%;
+}
+
+.top-nav i.notification-icon {
+    font-size: 24px; /* Tamaño de la campanita */
+    color: #333; /* Color de la campanita */
+    cursor: pointer;
+}
+/* Margen superior en el contenido principal */
+body {
+    padding-top: 70px; /* Ajusta según la altura del encabezado */
+}
+
+/* Ajustes adicionales para pantallas más pequeñas */
+@media (max-width: 480px) {
+    .top-nav {
+        height: 70px; /* Altura ajustada para móviles */
+    }
+
+    .top-nav img.logo {
+        width: 60px; /* Ajusta el tamaño de las imágenes */
+        height: 35px;
+    }
+    .top-nav img.profile-pic {
+        width: 55px;
+        height: 60px;
+        padding-left: 10px;
+    }
+    
+
+    .top-nav i.notification-icon {
+        font-size: 20px; /* Ajusta el tamaño del ícono de notificación */
+        margin-right: 10px;
+    }
+
+    body {
+        padding-top: 60px; /* Ajusta el margen superior para móviles */
+    }
+}
+
 
 
 /* Barra de navegación fija con fondo transparente y borroso */
@@ -339,3 +410,91 @@ body.index-page {
 
 
 
+
+/* Sección del perfil del usuario */
+.profile-section {
+    padding: 15px;
+    
+    text-align: center;
+}
+
+.profile-header {
+    margin-bottom: 15px;
+}
+
+.username {
+    font-size: 18px; /* Tamaño de fuente reducido para móviles */
+    font-weight: 700;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+}
+
+.username i {
+    margin-left: 5px; /* Ajuste de espacio entre el nombre de usuario y el ícono */
+    color: #478541; /* Color del ícono de verificación */
+}
+
+.user-handle {
+    font-size: 14px;
+    color: #888; /* Color gris para el @usuario */
+    margin-top: 5px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.profile-pic-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px; /* Espacio debajo de la imagen de perfil */
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Ancho completo para móviles */
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 16px; /* Tamaño de fuente ajustado */
+    font-weight: 700;
+}
+
+.stat-label {
+    font-size: 12px;
+    color: #555;
+}
+
+.profile-bio {
+    margin-top: 15px;
+}
+
+.profile-bio p {
+    font-size: 14px;
+    color: #555;
+    padding: 0 10px; /* Asegura que el texto no toque los bordes en pantallas pequeñas */
+}
+
+
+/* Estilos para el ícono de Home en el encabezado  EN SECCION NO QUE NO ES EL HOME.*/
+.home-icon-link {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.home-icon {
+    font-size: 24px; /* Ajusta el tamaño del icono de Home */
+    color: #333; /* Color del ícono */
+    cursor: pointer;
+}
