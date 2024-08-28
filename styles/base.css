@@ -1,0 +1,15 @@
+/* --------------------------------------
+   Estilos básicos y generales
+--------------------------------------- */
+body, html {
+    margin: 0;
+    padding: 0;
+    padding-left: 15px; /* Ajusta según sea necesario */
+    padding-right: 15px; /* Ajusta según sea necesario */
+    font-family: 'Inter', sans-serif;
+    background-color: var(--outer-background-color); /* Fondo blanco para el cuerpo */
+}
+
+.container {
+    padding-bottom: 80px; /* Espacio adicional para la barra de navegación */
+}

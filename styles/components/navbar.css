@@ -1,0 +1,131 @@
+/* --------------------------------------
+   Top Navigation Bar (Encabezado superior)
+--------------------------------------- */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px; /* Altura similar a la barra de navegación inferior */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--nav-color); /* Fondo  con transparencia */
+    backdrop-filter: blur(30px); /* Efecto borroso */
+    -webkit-backdrop-filter: blur(15px);
+    padding: 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra similar a la barra de navegación inferior */
+    z-index: 1000; /* Asegura que esté por encima del contenido */
+}
+
+.top-nav img.logo {
+    width: 40px; /* Tamaño del logo */
+    height: auto;
+}
+
+
+.top-nav i.notification-icon {
+    font-size: 24px; /* Tamaño de la campanita */
+    color: var(--text-color); /* Color de la campanita */
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .top-nav {
+        height: 70px; /* Altura ajustada para móviles */
+    }
+
+    .top-nav img.logo {
+        width: 60px; /* Ajusta el tamaño de las imágenes */
+        height: 60px;
+    }
+
+    .top-nav i.notification-icon {
+        font-size: 20px; /* Ajusta el tamaño del ícono de notificación */
+        margin-right: 10px;
+    }
+
+    body {
+        padding-top: 60px; /* Ajusta el margen superior para móviles */
+    }
+}
+
+/* --------------------------------------
+   Bottom Navigation Bar (Barra de navegación inferior)
+--------------------------------------- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--nav-color); /* Fondo  con transparencia */
+    backdrop-filter: blur(15px); /* Desenfoque de 15px */
+    -webkit-backdrop-filter: blur(15px); /* Soporte para Safari */
+    padding: 15px 0; /* Altura de la barra de navegación */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.3); /* Línea delgada semi-transparente */
+}
+
+@media (max-width: 480px) {
+    .bottom-nav {
+        background-color: var(--nav-color); /* Incrementa la opacidad a 40% en móviles */
+        backdrop-filter: blur(20px); /* Aumenta el desenfoque a 20px en móviles */
+        -webkit-backdrop-filter: blur(20px); /* Soporte para Safari */
+    }
+}
+
+.nav-item {
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #000000; /* Color negro por defecto */
+}
+
+.nav-item i {
+    font-size: 24px; /* Tamaño de los iconos */
+    margin-bottom: 4px; /* Espacio entre el icono y el texto */
+}
+
+.nav-item span {
+    display: block;
+}
+
+/* Estilo para el ítem activo */
+.nav-item.active {
+    color: #32a852; /* Tono verde planta */
+}
+
+/* Efecto de cambio de color en los iconos al hacer clic */
+.nav-item:active {
+    color: #167004; /* Color del texto al hacer clic */
+}
+
+@media (max-width: 480px) {
+    .nav-item {
+        font-size: 12px;
+    }
+
+    .nav-item i {
+        font-size: 20px;
+    }
+}
+
+/* Estilos para el ícono de Home en el encabezado  EN SECCION NO QUE NO ES EL HOME. */
+.home-icon-link {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.home-icon {
+    font-size: 24px; /* Ajusta el tamaño del icono de Home */
+    color: #333; /* Color del ícono */
+    cursor: pointer;
+}

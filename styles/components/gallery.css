@@ -1,0 +1,52 @@
+/* --------------------------------------
+   Galería de imágenes
+--------------------------------------- */
+.image-gallery {
+    display: grid;
+    gap: 5px;
+    width: 100%;
+}
+
+/* Estilos de las imágenes en la galería */
+.post-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Las imágenes se ajustan al contenedor */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Reglas para distribución según cantidad de imágenes */
+.image-gallery img:nth-child(1) {
+    grid-column: span 2; /* La primera imagen ocupa más espacio en caso de tres imágenes */
+}
+
+/* Distribución general dependiendo del número de imágenes */
+.image-gallery {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr)); /* Por defecto: 50% de ancho */
+}
+
+/* 1 imagen ocupa todo el ancho */
+.image-gallery img:nth-child(1):only-child {
+    grid-template-columns: 100%;
+}
+
+/* Si hay 2 imágenes, cada una ocupa el 50% */
+.image-gallery img:nth-child(2):nth-last-child(1) ~ img {
+    grid-template-columns: repeat(2, 50%);
+}
+
+/* Si hay 3 imágenes, la primera ocupa el 50%, las otras dos el 25% */
+.image-gallery img:nth-child(3):nth-last-child(2) ~ img {
+    grid-template-columns: 50% 25% 25%;
+}
+
+/* Si hay 4 imágenes, cada una ocupa el 25% */
+.image-gallery img:nth-child(4):nth-last-child(3) ~ img {
+    grid-template-columns: repeat(4, 25%);
+}
+
+/* Para más de 4 imágenes, se mantiene el layout adaptable */
+.image-gallery img:nth-child(5):nth-last-child(n+4) ~ img {
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}

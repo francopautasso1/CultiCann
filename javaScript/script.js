@@ -33,3 +33,44 @@ document.querySelector(".close").onclick = function() {
 }
 
     
+
+/* --------------------------------------
+   CAMBIO DE TEMA (CLARO-OSCURO)
+--------------------------------------- */
+document.addEventListener("DOMContentLoaded", function () {
+    const themeToggle = document.getElementById("theme-toggle");
+    let currentTheme = localStorage.getItem("theme") || "default";
+
+    // Función para cambiar el tema
+    function setTheme(theme) {
+        const themeLink = document.createElement("link");
+        themeLink.rel = "stylesheet";
+        themeLink.type = "text/css";
+        themeLink.href = `./styles/themes/${theme}.css`;
+        themeLink.id = "theme-style";
+
+        const existingThemeLink = document.getElementById("theme-style");
+        if (existingThemeLink) {
+            document.head.replaceChild(themeLink, existingThemeLink);
+        } else {
+            document.head.appendChild(themeLink);
+        }
+
+        // Cambiar icono de luna/sol
+        themeToggle.classList.toggle('bi-sun', theme === 'default');
+        themeToggle.classList.toggle('bi-moon', theme === 'dark');
+
+        // Guardar el tema en localStorage
+        localStorage.setItem("theme", theme);
+        currentTheme = theme;  // Actualiza el tema actual
+    }
+
+    // Aplicar el tema al cargar la página
+    setTheme(currentTheme);
+
+    // Cambiar tema al hacer clic en el botón
+    themeToggle.addEventListener("click", function () {
+        const newTheme = currentTheme === "default" ? "dark" : "default";
+        setTheme(newTheme);
+    });
+});

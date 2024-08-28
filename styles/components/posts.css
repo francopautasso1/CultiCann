@@ -1,0 +1,56 @@
+/* --------------------------------------
+   Estilos de los posts
+--------------------------------------- */
+
+
+.post {
+    padding: 15px 5px;
+    margin: 15px 0;
+    border-top: 0px solid var(--secondary-color); /* Usar la variable CSS */
+    border-bottom: 4px solid #376232; /* Usar la variable CSS */
+    color: var(--text-color); /* Usar la variable CSS */
+    background-color: var(--background-color); /* Usar la variable CSS */
+}
+
+
+.post-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.username {
+    font-weight: 700;
+    color: #333;
+}
+
+.post-content {
+    margin-bottom: 10px;
+}
+
+.post-content p {
+    margin: 10px 0;
+    color: var(--text-color);
+}
+
+.post-image {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 15px; /* Espacio entre los botones */
+    padding-top: 10px;
+}
+
+

@@ -1,0 +1,39 @@
+/* --------------------------------------
+   Estilos de la página de inicio (index)
+--------------------------------------- */
+body.index-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Estilo del logo centrado */
+.index-page .logo {
+    width: 280px; /* Tamaño del logo */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.index-page .logo:hover {
+    transform: scale(1.1); /* Efecto de agrandar al pasar el mouse */
+}
+
+/* Contenedor de la introducción */
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Estilo del texto de introducción */
+.intro-text {
+    font-family: 'Inter', sans-serif; /* Asegura que use la misma tipografía */
+    font-weight: 700; /* Negrita */
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px; /* Espacio entre el texto y el logo */
+}
+

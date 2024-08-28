@@ -1,0 +1,24 @@
+/* --------------------------------------
+   Tema oscuro (Modo Noche)
+--------------------------------------- */
+
+:root {
+    --primary-color: #32a852;  /* Color diferente para el modo oscuro */
+    --secondary-color: #68c15f;
+    --background-color: #333333;
+    --text-color: #ffffff;
+    --nav-color: rgba(56, 95, 52, 0.6);
+    --outer-background-color: var(--background-color);
+}
+
+/* Aplicación de los colores */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.nav-item.active {
+    color: var(--primary-color);
+}
+
+/* Otros estilos que utilizan estas variables... */
