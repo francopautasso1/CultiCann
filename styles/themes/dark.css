@@ -8,6 +8,7 @@
     --background-color: #333333;
     --text-color: #ffffff;
     --nav-color: rgba(56, 95, 52, 0.6);
+    --top-nav-color: rgba(51, 51, 51, 0.6);
     --outer-background-color: var(--background-color);
 }
 

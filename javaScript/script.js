@@ -74,3 +74,29 @@ document.addEventListener("DOMContentLoaded", function () {
         setTheme(newTheme);
     });
 });
+
+
+
+/* --------------------------------------
+   OCULTAR TOP-NAVBAR CON SCROLL HACIA ABAJO
+--------------------------------------- */
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    let lastScrollY = window.scrollY; // Guarda la posición del scroll anterior
+    const topNav = document.querySelector('.top-nav');
+
+    window.addEventListener('scroll', function() {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY) {
+            // Desplazamiento hacia abajo - oculta la top-nav
+            topNav.classList.add('hidden');
+        } else {
+            // Desplazamiento hacia arriba - muestra la top-nav
+            topNav.classList.remove('hidden');
+        }
+
+        lastScrollY = currentScrollY; // Actualiza la posición del scroll
+    });
+});

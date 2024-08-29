@@ -10,13 +10,20 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: var(--nav-color); /* Fondo  con transparencia */
+    background-color: var(--top-nav-color); /* Fondo  con transparencia */
     backdrop-filter: blur(30px); /* Efecto borroso */
     -webkit-backdrop-filter: blur(15px);
     padding: 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra similar a la barra de navegación inferior */
     z-index: 1000; /* Asegura que esté por encima del contenido */
+    transition: top 0.3s; /* Transición para deslizamiento */
 }
+/* Cuando la nav está oculta */
+.top-nav.hidden {
+    top: -70px; /* Mueve la nav fuera de la pantalla */
+}
+
+
 
 .top-nav img.logo {
     width: 40px; /* Tamaño del logo */
@@ -121,11 +128,11 @@
 .home-icon-link {
     display: flex;
     align-items: center;
-    padding: 20px;
+    
 }
 
 .home-icon {
     font-size: 24px; /* Ajusta el tamaño del icono de Home */
-    color: #333; /* Color del ícono */
+    color: var(--text-color); /* Color del ícono */
     cursor: pointer;
 }
