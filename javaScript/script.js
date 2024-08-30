@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
     let lastScrollY = window.scrollY; // Guarda la posición del scroll anterior
     const topNav = document.querySelector('.top-nav');
-    const threshold = 50; // Umbral de scroll en píxeles
+    const threshold = 100; // Umbral de scroll en píxeles
 
     window.addEventListener('scroll', function() {
         const currentScrollY = window.scrollY;
