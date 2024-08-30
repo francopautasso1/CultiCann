@@ -81,10 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
    OCULTAR TOP-NAVBAR CON SCROLL HACIA ABAJO
 --------------------------------------- */
 
-
 document.addEventListener("DOMContentLoaded", function() {
     let lastScrollY = window.scrollY; // Guarda la posición del scroll anterior
     const topNav = document.querySelector('.top-nav');
+    const threshold = 50; // Umbral de scroll en píxeles
 
     window.addEventListener('scroll', function() {
         const currentScrollY = window.scrollY;
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (currentScrollY > lastScrollY) {
             // Desplazamiento hacia abajo - oculta la top-nav
             topNav.classList.add('hidden');
-        } else {
+        } else if (lastScrollY > currentScrollY + threshold) {
             // Desplazamiento hacia arriba - muestra la top-nav
             topNav.classList.remove('hidden');
         }
