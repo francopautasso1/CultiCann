@@ -111,7 +111,7 @@
 
 @media (max-width: 480px) {
     .bottom-nav {
-        padding: 5px 0; /* Ajusta el padding para reducir la altura en móviles */
+        padding: 1px 0; /* Ajusta el padding para reducir la altura en móviles */
         background-color: var(--nav-color); /* Incrementa la opacidad a 40% en móviles */
         backdrop-filter: blur(20px); /* Aumenta el desenfoque a 20px en móviles */
         -webkit-backdrop-filter: blur(20px); /* Soporte para Safari */
