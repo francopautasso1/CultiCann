@@ -102,3 +102,35 @@ document.addEventListener("DOMContentLoaded", function() {
         lastScrollY = currentScrollY; // Actualiza la posición del scroll
     });
 });
+
+
+
+
+
+
+/* --------------------------------------
+   LOADING-PAGE   TRANSICION A LA CARGA DE PAGINA
+--------------------------------------- */
+
+// Mostrar loader al cambiar de página
+function showLoader() {
+    document.querySelector('.loader-container').style.display = 'flex';
+}
+
+// Ocultar loader al terminar la carga de la página
+window.addEventListener('load', function() {
+    document.querySelector('.loader-container').style.display = 'none';
+});
+
+// Simulación de cambio de página
+document.querySelectorAll('.nav-item, .add-post').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        showLoader();
+
+        // Simula un cambio de página, sin esto NO hay tiempo de animacion
+        setTimeout(() => {
+            window.location.href = link.href;
+        }, 2000);
+    });
+});

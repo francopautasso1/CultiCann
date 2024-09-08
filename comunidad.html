@@ -16,15 +16,13 @@
     </div>
 
   
-  <!-- Barra de navegación fija en la parte inferior -->
+<!-- Barra de navegación fija en la parte inferior -->
 <nav class="bottom-nav">
     <a href="home.html" class="nav-item home">
         <i class="bi bi-house"></i>
-        <span>Home</span>
     </a>
-    <a href="comunidad.html" class="nav-item">
+    <a href="comunidad.html" class="nav-item community">
         <i class="bi bi-people"></i>
-        <span>Comunidad</span>
     </a>
     
     <!-- Botón de nueva publicación -->
@@ -34,17 +32,31 @@
         </div>
     </a>
     
-    
-    <a href="explorar.html" class="nav-item">
+    <a href="explorar.html" class="nav-item explorar">
         <i class="bi bi-search"></i>
-        <span>Explorar</span>
     </a>
     <a href="perfil.html" class="nav-item profile">
         <i class="bi bi-person"></i>
-        <span>Perfil</span>
     </a>
 </nav>
     
+
+  <!-- Animación de carga -->
+  <div class="loader-container" style="display:none;">
+    <div class="loader">
+        <img src="./icons/loading-page1.png" class="loader-icon icon-1">
+        <img src="./icons/loading-page2.png" class="loader-icon icon-2">
+        <img src="./icons/loading-page3.png" class="loader-icon icon-3">
+        <img src="./icons/loading-page4.png" class="loader-icon icon-4">
+    </div>
+</div>
+
+
+    <!-- Contenedor Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
     
 
     <script src="./javaScript/script.js"></script>

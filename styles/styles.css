@@ -1,6 +1,7 @@
 /* Importar estilos base y layouts */
 @import url('base.css');
 @import url('layout.css');
+@import url('page-loading.css');
 
 /* Importar componentes */
 @import url('./components/navbar.css');
@@ -13,5 +14,6 @@
 @import url('./pages/index.css');
 @import url('./pages/profile.css');
 
-/* Importar temas (si los hay) */
+
+/* Importar temas  */
 @import url('./themes/default.css');
