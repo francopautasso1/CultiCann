@@ -50,7 +50,7 @@
 
 /* Estilos para ocultar todos los iconos menos el actual */
 .loader-icon {
-    position: absolute;
+    
     left: 170px;
     opacity: 0;
 }
